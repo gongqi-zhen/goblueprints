@@ -15,6 +15,7 @@ func uploaderHandler(w http.ResponseWriter, req *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+	defer file.Close()
 	data, err := ioutil.ReadAll(file)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)

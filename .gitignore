@@ -27,7 +27,7 @@ chapter1/chat/chat
 chapter2/chat/chat
 
 chapter3/chat/chat
-chapter3/chat/avatars/*
+#chapter3/chat/avatars/*
 chapter4/build/available
 
 chapter4/build/synonyms
