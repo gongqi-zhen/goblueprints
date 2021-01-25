@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"text/template"
 
-	"github.com/matryer/goblueprints/chapter1/trace"
+	"github.com/gongqi-zhen/goblueprints/chapter1/trace"
 	"github.com/stretchr/gomniauth"
 	"github.com/stretchr/gomniauth/providers/facebook"
 	"github.com/stretchr/gomniauth/providers/github"
@@ -51,11 +51,11 @@ func main() {
 	flag.Parse() // parse the flags
 
 	// setup gomniauth
-	gomniauth.SetSecurityKey("98dfbg7iu2nb4uywevihjw4tuiyub34noilk")
+	gomniauth.SetSecurityKey("signature.RandomKey(64)")
 	gomniauth.WithProviders(
-		github.New("3d1e6ba69036e0624b61", "7e8938928d802e7582908a5eadaaaf22d64babf1", "http://localhost:8080/auth/callback/github"),
-		google.New("44166123467-o6brs9o43tgaek9q12lef07bk48m3jmf.apps.googleusercontent.com", "rpXpakthfjPVoFGvcf9CVCu7", "http://localhost:8080/auth/callback/google"),
-		facebook.New("537611606322077", "f9f4d77b3d3f4f5775369f5c9f88f65e", "http://localhost:8080/auth/callback/facebook"),
+		github.New("d305f46119031a731609", "2ac3a6d3b5dde276d19db4e73850ac045c68f2b5", "http://localhost:8080/auth/callback/github"),
+		google.New("139135232256-fgd745hqk56oo1erc4ik9pp1ua78iabi.apps.googleusercontent.com", "UuSv7o6oX8gMNr8f3tKSwxUW", "http://localhost:8080/auth/callback/google"),
+		facebook.New("1585847938283339", "69ea8a98d6e5624d47c937e738b2c802", "http://localhost:8080/auth/callback/facebook"),
 	)
 
 	r := newRoom()
