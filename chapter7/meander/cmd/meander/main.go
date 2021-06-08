@@ -4,16 +4,17 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+	"os"
 	"runtime"
 	"strconv"
 	"strings"
 
-	"github.com/matryer/goblueprints/chapter7/meander"
+	"github.com/gongqi-zhen/goblueprints/chapter7/meander"
 )
 
 func main() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
-	meander.APIKey = "YOUR API KEY HERE"
+	meander.APIKey = os.Getenv("APIKEY")
 	http.HandleFunc("/journeys", cors(func(w http.ResponseWriter, r *http.Request) {
 		respond(w, r, meander.Journeys)
 	}))
