@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/cheekybits/is"
-	"github.com/matryer/goblueprints/chapter7/meander"
+	"github.com/gongqi-zhen/goblueprints/chapter7/meander"
 )
 
 func TestPlaceJSON(t *testing.T) {
